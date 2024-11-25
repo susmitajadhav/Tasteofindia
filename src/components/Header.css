@@ -1,0 +1,244 @@
+/* Base styles for the header */
+.header {
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center!important;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.logo {
+  flex: 0 0 auto; /* Keeps logo at its natural width */
+}
+
+.logo-img {
+  height: 150px;
+}
+
+/* Search bar styling */
+.search-bar {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px; /* Set a max width to prevent shrinking on laptop screens */
+}
+
+.search-input {
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid #ccc;
+  border-radius: 50px; /* Rounded look */
+  transition: all 0.3s ease-in-out;
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: 0px 0px 10px #21bd96;
+  border-color: #008080;
+}
+
+/* Button styling */
+.search-bar button {
+  margin-left: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+}
+
+/* Icon section */
+.custom-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem; /* Reduced gap for closer alignment */
+}
+
+.custom-icons a {
+  text-decoration: none;
+  color: #21bd96;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.custom-icons a:hover {
+  color: #f72b08;
+  transform: scale(1.1);
+}
+
+.custom-icons i {
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Specific colors for icons */
+.custom-wishlist-icon i {
+  color: #21bd96;
+}
+
+.custom-add-recipe-icon i {
+  color: #4CAF50;
+}
+
+.custom-login-icon i {
+  color: #21bd96;
+}
+
+/* Updated Icon Container */
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.icon-label {
+  font-size: 0.9rem;
+  color: #333;
+  margin-top: 4px;
+  width: 100%; /* Ensure the label takes the full width of the container */
+  position: absolute;
+  bottom: -20px; /* Adjust this value to control the distance from the icon */
+  left:-6px;
+}
+
+
+/* Profile Icon Container */
+.profile-icon {
+  font-size: 24px;
+  color: #21bd96;
+}
+
+/* Dropdown Menu */
+.profile-dropdown-vertical {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 8px 0;
+  width: 150px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-dropdown-vertical .dropdown-item {
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 10px 16px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  width: 100%;
+}
+
+.profile-dropdown-vertical .dropdown-item:hover {
+  background-color: #21bd96;
+  color: #000;
+}
+
+/* Responsive adjustments */
+
+/* For medium screens (tablets, small laptops) */
+@media (max-width: 1024px) {
+  .header {
+    padding: 0.8rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .search-input {
+    max-width: 400px;
+    font-size: 0.9rem;
+  }
+
+  .custom-icons i {
+    font-size: 1.6rem;
+  }
+
+  .search-bar {
+    max-width: 450px;
+  }
+
+  .icon-container {
+    margin-right: 0.6rem;
+  }
+}
+
+/* For smaller screens (large phones, small tablets) */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .search-bar {
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .logo {
+    order: -1;
+    margin-right: 0.5rem;
+  }
+
+  .search-input {
+    flex: 1;
+    width: auto;
+    max-width: 100%; /* Ensures the input takes up remaining space */
+  }
+
+  .search-bar button {
+    margin-left: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+  }
+
+  .custom-icons {
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem; /* Adjusted gap for smaller screens */
+  }
+
+  .custom-icons i {
+    font-size: 1.5rem;
+  }
+
+  .icon-container {
+    margin-right: 0.4rem;
+  }
+}
+
+/* For mobile screens (small phones) */
+@media (max-width: 480px) {
+  .header {
+    padding: 0.5rem;
+  }
+
+  .logo-img {
+    height: 40px;
+  }
+
+  .search-input {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .custom-icons i {
+    font-size: 1.3rem;
+  }
+
+  .icon-label {
+    font-size: 0.8rem;
+  }
+
+  .icon-container {
+    margin-right: 0.3rem;
+  }
+}

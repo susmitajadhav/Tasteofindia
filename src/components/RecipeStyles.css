@@ -1,0 +1,58 @@
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa; /* Light background for contrast */
+}
+
+/* Shared Styles for Different Recipe Pages */
+.taste-details,
+.occasion-details,
+.meal-details,
+.diet-details, /* Added for DietDetailPage */
+.ingredient-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.recipe-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.recipe-card img {
+  width: 100%;
+  height: auto;
+}
+
+.recipe-card h5 {
+  margin: 10px;
+  text-align: center;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific Styles for DietDetailPage */
+.diet-details h1 {
+  text-align: center;
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* Adjustments for mobile devices */
+@media (max-width: 600px) {
+  .recipe-card {
+    font-size: 0.9em; /* Adjust font size for smaller screens */
+  }
+}

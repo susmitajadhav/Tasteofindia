@@ -1,0 +1,164 @@
+/* Contact.css */
+
+/* Main page container */
+.contact-page {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Map container for full width */
+.map-container {
+  width: 100%;
+  height: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #eaeaea;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Content layout below the map */
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* User Profile Form */
+.user-profile-form {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+}
+
+.user-profile-form h2 {
+  font-size: 1.6em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.user-profile-form form label {
+  display: block;
+  margin-top: 10px;
+  font-size: 1em;
+  color: #555;
+}
+
+.user-profile-form form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.form-buttons button {
+  width: 48%;
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-buttons button[type="reset"] {
+  background-color: #f44336;
+  color: white;
+  border: none;
+}
+
+.form-buttons button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+/* Contact Info */
+.contact-info {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+}
+
+.contact-info h2 {
+  font-size: 1.6em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  font-size: 1em;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Responsive Layout */
+@media (min-width: 768px) {
+  .contact-content {
+    flex-direction: row;
+  }
+}
+/* Add keyframes for animation */
+@keyframes fadeInSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply the animation to the form */
+.user-profile-form {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  animation: fadeInSlideUp 1s ease-out;
+}
+
+/* Apply animation to the contact info container for consistency */
+.contact-info {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  animation: fadeInSlideUp 1s ease-out;
+  animation-delay: 0.2s; /* Slight delay to stagger the animations */
+}
+
+/* Apply animations to input fields for a smooth appearance */
+.user-profile-form input,
+.user-profile-form textarea {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.user-profile-form input:focus,
+.user-profile-form textarea:focus {
+  background-color: #f0f8ff; /* Light blue background when focused */
+  transform: scale(1.02); /* Slightly enlarge on focus */
+}
+
+/* Button hover animation */
+.form-buttons button {
+  transition: transform 0.3s ease;
+}
+
+.form-buttons button:hover {
+  transform: scale(1.05);
+}

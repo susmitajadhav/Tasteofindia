@@ -1,0 +1,49 @@
+@import "../node_modules/bootstrap/dist/css/bootstrap-grid.css";
+
+
+
+body, html {
+  font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    
+}
+
+
+
+
+.view-recipe-button {
+  display: inline-block;
+  justify-content: center;
+  margin-top: auto;
+  padding: 10px 10px;
+  background-color: #3498db;
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.view-recipe-button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

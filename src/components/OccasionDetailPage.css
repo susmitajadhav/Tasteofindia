@@ -1,0 +1,243 @@
+/* Container for the recipe grid */
+.occasion-detail-container {
+  width: 100%;
+  padding: 0 10px; /* Adjust padding */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.occasion-detail-title {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #2c3e50;
+  
+}
+
+/* Grid layout */
+.occasion-detail-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+/* Recipe card styles */
+.occasion-detail-card {
+  position: relative;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 350px;
+  padding: 10px;
+  box-sizing: border-box;
+  height: auto; /* Adjust based on your layout */
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+/* Image */
+.occasion-detail-image {
+  object-fit: cover;
+  height: 220px;
+  width: 100%;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+}
+
+/* Recipe name */
+.occasion-detail-title-text {
+  font-size: 1.2em;
+  color: #333;
+  text-align: center;
+  margin-top: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: bold;
+  text-decoration: none!important;
+}
+
+/* Wishlist button styles */
+.wishlist-button2 {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 30px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  
+}
+
+.wishlist-button2 .fa-heart {
+  transition: color 0.3s ease;
+  color: white;
+}
+
+.wishlist-button2 .fa-heart.red {
+  color: red;
+}
+
+/* View Recipe button styles */
+.Occasion-view-recipe-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1em;
+  text-align: center;
+  width: auto; /* Remove full width */
+  display: inline-block; /* Change display type to inline-block */
+  margin: 10px auto; /* Center the button */
+  text-decoration: none!important;
+
+}
+
+.Occasion-view-recipe-button:hover {
+  background-color: #2980b9;
+}
+
+
+/* Hover effects */
+.occasion-detail-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.occasion-detail-card:hover .occasion-detail-image {
+  transform: scale(1.05);
+}
+
+/* Loading */
+.loading {
+  text-align: center;
+  font-size: 1.5em;
+  color: #999;
+}
+
+/* Error message */
+.error-message {
+  color: red;
+  text-align: center;
+}
+
+/* No recipes found */
+.no-recipes-message {
+  text-align: center;
+  font-size: 1.2em;
+  color: #555;
+}
+
+/* Responsive adjustments */
+
+@media (max-width: 1440px) {
+  .occasion-detail-container {
+    max-width: 1100px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .occasion-detail-container {
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .occasion-detail-container {
+    width: 90%; /* Adjust container width to ensure even spacing on both sides */
+    max-width: 900px; /* Optional: Set a maximum width */
+    margin: 0 auto; /* Center the container */
+    padding: 0 15px; /* Add a bit of padding to the sides */
+  }
+
+  .occasion-detail-list {
+    grid-template-columns: repeat(3, 1fr); /* Display three cards per row */
+}
+
+  .occasion-detail-card {
+    width: 100%; /* Make sure each card takes the available width in the grid */
+    max-width: 280px; /* Optional: Set a max width for each card */
+    margin: 0 auto; /* Center each card */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .occasion-detail-container {
+    max-width: 700px; /* Set a maximum width for the container */
+    padding: 10px 15px; /* Add padding on the left and right */
+  }
+
+  .occasion-detail-list {
+    grid-template-columns: repeat(2, 1fr); /* Display two cards per row */
+    gap: 15px; /* Add more space between the cards */
+  }
+
+  .occasion-detail-card {
+    width: 95%; /* Reduce card width slightly to add space on sides */
+    max-width: 320px; /* Ensure cards don’t get too wide */
+    margin: 0 auto; /* Center the card */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 15px; /* Add padding within each card */
+  }
+
+  .occasion-detail-image {
+    height: 180px; /* Adjust image height */
+  }
+
+  .occasion-detail-title {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+  }
+
+  .Occasion-view-recipe-button {
+    padding: 8px 12px;
+    font-size: 0.9em;
+    margin-top: 10px; /* Space between button and other content */
+  }
+}
+
+
+@media (max-width: 480px) {
+  .occasion-detail-container {
+    max-width: 100%; /* Full width for mobile */
+    padding: 10px; /* Padding on all sides */
+  }
+
+  .occasion-detail-list {
+    grid-template-columns: 1fr;
+    gap: 15px; /* Add some space between the cards */
+  }
+
+  .occasion-detail-card {
+    width: 95%; /* Add margin by slightly reducing width */
+    max-width: 400px; /* Ensure cards don't get too wide */
+    margin: 0 auto; /* Center the card */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 10px; /* Add padding within each card */
+  }
+
+  .occasion-detail-image {
+    height: 180px; /* Adjust image height */
+  }
+
+  .occasion-detail-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+
+  .Occasion-view-recipe-button {
+    padding: 8px 12px;
+    font-size: 0.9em;
+    margin-top: 10px; /* Space between button and other content */
+  }
+}

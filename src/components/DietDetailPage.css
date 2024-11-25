@@ -1,0 +1,165 @@
+/* Main styling for the Diet Detail Page */
+.diet-detail-page {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.diet-detail-title {
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: #333;
+  
+}
+
+/* Grid layout for recipe cards */
+.diet-recipe-grid {
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Recipe card styles */
+.diet-recipe-card {
+  margin: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.diet-recipe-card:hover {
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+/* Recipe image */
+.diet-recipe-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Recipe title */
+.diet-recipe-title {
+  font-size: 1.5em;
+  margin: 10px 0;
+  color: #555;
+  text-decoration: none; /* Add this line */
+}
+
+/* View Recipe Button */
+.diet-view-recipe-button {
+  display: inline-block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: #f51810;
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.diet-view-recipe-button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+/* Wishlist icon */
+.wishlist-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.wishlist-icon.active {
+  color: red;
+}
+
+/* Responsive Design */
+
+/* 4 cards per row for large screens (1440px and up) */
+@media (min-width: 1440px) {
+  .diet-recipe-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .diet-recipe-card {
+    margin: 10px;
+  }
+  .diet-detail-title {
+    font-size: 2.2em;
+  }
+}
+
+/* 3 cards per row for medium screens (1024px to 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .diet-recipe-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .diet-recipe-card {
+    margin: 15px;
+  }
+  .diet-detail-title {
+    font-size: 1.8em;
+  }
+}
+
+/* 2 cards per row for small screens (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .diet-recipe-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .diet-recipe-card {
+   
+    margin: 15px;
+    padding:0px
+  }
+  .diet-detail-title {
+    font-size: 1.6em;
+  }
+}
+
+/* 1 card per row for extra small screens (480px to 767px) */
+@media (max-width: 767px) {
+  .diet-recipe-grid {
+    grid-template-columns: 1fr;
+  }
+  .diet-recipe-card {
+    width: 80%;
+    margin: 10px auto;
+  }
+  .diet-detail-title {
+    font-size: 1.4em;
+  }
+  .diet-view-recipe-button {
+    width: 50%;
+  }
+}
+
+/* Additional adjustments for very small screens (below 480px) */
+@media (max-width: 480px) {
+  .diet-recipe-title {
+    font-size: 1.2em;
+  }
+  .wishlist-icon {
+    font-size: 22px;
+  }
+  .diet-view-recipe-button {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+}

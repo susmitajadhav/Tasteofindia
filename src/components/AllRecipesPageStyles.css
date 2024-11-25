@@ -1,0 +1,298 @@
+/* Container for the recipe grid */
+.all-recipes-container {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* Heading style */
+.all-recipes-heading {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #066d53!important;
+  font-size: 2.5em;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+/* Recipe grid */
+.all-recipes-row {
+  display: grid;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Recipe card */
+.all-recipes-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.3s ease;
+  
+}
+
+.all-recipes-card:hover {
+  transform: translateY(-5px);
+}
+
+.all-recipes-card-img {
+  object-fit: cover;
+  height: 60%;
+  width: 100%;
+}
+
+.all-recipes-card-body {
+  padding: 10px;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+/* Recipe title */
+.all-recipes-card-title {
+  font-size: 1.3em;
+  color: #333;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-bottom: 20px!important;
+}
+
+/* View Recipe button */
+.all-view-recipe-button {
+  padding: 8px 16px;
+  background-color: #e90505;
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 5px;
+}
+
+.all-view-recipe-button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+/* Wishlist icon */
+.wishlist-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 36px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.wishlist-icon.active {
+  color: red;
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+
+/* Alphabet navigation bar */
+.alphabet-nav {
+  display: flex;
+ 
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.alphabet-link {
+  font-size: 1.2em;
+  color: #f51810;
+  padding: 5px 10px;
+  text-decoration: none;
+  border: 1px solid #f51810;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.alphabet-link:hover {
+  background-color: #f51810;
+  color: white;
+}
+
+/* Recipe group section */
+.recipe-group {
+  margin-bottom: 40px;
+}
+
+.group-title {
+  font-size: 2em;
+  color: #34495e;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ddd;
+}
+/* Responsive adjustments */
+
+/* 1440px and above - 4 cards per row */
+@media (min-width: 1440px) {
+  .all-recipes-container .all-recipes-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Ensure 4 columns */
+    gap: 20px; /* Space between cards */
+    margin: 0 auto; /* Center the grid within the container */
+    
+  }
+  .all-recipes-heading {
+    font-size: 2.5em;
+  }
+  .all-recipes-card {
+    height: 350px; /* Adjust as needed */
+  }
+}
+
+
+/* 1024px to 1439px - Ensure 3 cards per row */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .all-recipes-container .all-recipes-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ensure 3 columns */
+    gap: 20px; /* Space between cards */
+  }
+  .all-recipes-heading {
+    font-size: 2.3em;
+  }
+
+  .all-recipes-card {
+    height: 350px; /* Adjust as needed */
+  }
+}
+
+
+/* 768px to 1023px - 2 cards per row */
+/* 768px to 1023px - 2 cards per row */
+@media (min-width: 768px) and (max-width: 1023px) {
+ 
+  
+  .all-recipes-heading {
+    font-size: 2em;
+    margin-bottom: 30px; /* Adjust heading margin */
+  }
+  
+  .alphabet-nav {
+    gap: 8px; /* Adjust spacing between alphabet links */
+    justify-content: center;
+    padding-bottom: 15px;
+  }
+  
+  .all-recipes-container {
+    display: flex;
+    justify-content: center;
+    padding: 0 1rem; /* Add padding to keep some spacing on the sides */
+  }
+
+  .all-recipes-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+    gap: 26px; /* Adjust gap between cards */
+    max-width: 600px; /* Set a max-width to prevent shifting */
+  }
+
+  .all-recipes-card {
+    height: 300px; /* Adjust height for better layout */
+  }
+
+  .all-recipes-card-img {
+    height: 60%; /* Keep image height consistent */
+  }
+  
+  .wishlist-icon {
+    font-size: 28px; /* Adjust icon size */
+    top: 12px;
+    right: 12px;
+  }
+
+  .group-title {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}
+
+/* 481px to 767px - 1 card per row */
+@media (min-width: 481px) and (max-width: 767px) {
+  .all-recipes-container {
+    padding: 1rem; /* Reduced padding for smaller screen */
+  }
+  
+  .all-recipes-heading {
+    font-size: 1.8em;
+    margin-bottom: 20px; /* Reduced margin for smaller screens */
+    text-align: center; /* Center-align heading */
+  }
+  
+  .alphabet-nav {
+    gap: 6px; /* Reduced spacing between alphabet links */
+    justify-content: center;
+    padding-bottom: 12px;
+    font-size: 0.9em; /* Adjust font size */
+  }
+  
+  .all-recipes-row {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 12px; /* Space between cards */
+    padding: 0 0.5rem; /* Reduced padding for container */
+  }
+
+  .all-recipes-card {
+    height: 280px; /* Adjusted height to fit content */
+  }
+
+  .all-recipes-card-img {
+    height: 60%; /* Consistent image height */
+  }
+  
+  .wishlist-icon {
+    font-size: 26px; /* Smaller icon size */
+    top: 10px;
+    right: 10px;
+  }
+
+  .group-title {
+    font-size: 1.4em;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+}
+
+
+
+/* Below 768px - 1 card per row */
+@media (max-width: 480px) {
+  .all-recipes-row {
+    grid-template-columns: 1fr;
+  }
+  .all-recipes-heading {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+  .all-recipes-card {
+    height: 350px; /* Adjust as needed */
+  }
+  .all-recipes-card-body {
+    padding: 10px;
+  }
+  .wishlist-icon {
+    font-size: 28px;
+    top: 10px;
+    right: 10px;
+  }
+}

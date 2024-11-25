@@ -1,0 +1,375 @@
+/* AboutUs.css */
+body {
+  background-color: #f9f9f9; 
+  font-family: 'Arial', sans-serif;
+  overflow-x: hidden;
+}
+
+.about-section {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.content-text p {
+  margin: 10px;
+}
+
+.section-title {
+  font-size: 30px;
+  margin: 0px!important;
+  font-weight: bold;
+  color: #333;
+}
+
+.about-banner {
+  margin: 30px 0;
+}
+
+.about-banner-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.about-text {
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+
+/* Section Styling */
+.about-section,.journey-section, .vision-section,.healthy-section,.terms-section p {
+  font-size: 18px;
+  background-color: #F0FFF4;
+  color: #333;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.journey-section {
+  margin-top: 0px!important;
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.content-image {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.content-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.content-text {
+  padding-left: 20px;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+p {
+  line-height: 1.6;
+  color: #555;
+}
+ .img1{
+  height: 20rem;
+  margin-top: 1rem;
+}
+
+/* Section Animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-title {
+  padding-top: 0px!important;
+  margin-top: 0px!important;
+  font-size: 3em;
+  color: #2c3e50;
+  text-align: center;
+  position: relative;
+  font-weight: bold;
+  letter-spacing: 2px;
+  animation: slideIn 1s ease-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Text styling with animation */
+.about-text, .content-text {
+  line-height: 1.8;
+  color: #555;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: textFadeIn 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+  text-align: justify;
+}
+
+@keyframes textFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.vision-section {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.vision-section .flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  gap: 30px; 
+  flex-wrap: nowrap; 
+}
+
+.vision-section .content-image {
+  padding-top: 2rem;
+  flex: 1;
+  max-width: 50%; 
+  text-align: center;
+}
+
+.vision-section .content-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vision-section .content-text {
+  flex: 1;
+  max-width: 50%; 
+  padding-right: 20px;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .vision-section .flex-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .vision-section .content-image, .vision-section .content-text {
+    max-width: 100%;
+    padding-right: 0;
+  }
+}
+
+.content-image {
+  transition: transform 0.5s ease;
+}
+
+.content-image:hover {
+  transform: translateY(-10px);
+}
+
+.terms-section {
+  background-color: #f8f8f8;
+  padding: 50px;
+  text-align: left;
+  border-top: 3px solid #e74c3c;
+}
+
+h3 {
+  color: #2980b9;
+  margin-bottom: 15px;
+}
+
+p {
+  color: #333;
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.terms-section button {
+  padding: 10px 20px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease;
+}
+
+.terms-section button:hover {
+  background-color: #c0392b;
+}
+
+@media (max-width: 768px) {
+  .flex-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .about-section, .journey-section, .vision-section, .healthy-section, .terms-section {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+}
+
+.healthy-section img {
+  width: 600px; 
+  height: 500px; 
+}
+
+.healthy-section .section-title {
+  font-size: 40px;
+  text-align: center;
+}
+
+.healthy-section p {
+  text-align: justify;
+  padding: 10px 0;
+}
+
+
+section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 10px; 
+}
+
+.about-section, .journey-section, .vision-section, .healthy-section, .terms-section {
+  padding-top: 20px;  
+  padding-bottom: 20px; 
+  margin-bottom: 15px;  
+}
+
+.about-section + .journey-section, 
+.journey-section + .vision-section, 
+.vision-section + .healthy-section, 
+.healthy-section + .terms-section {
+  margin-top: 0;
+  margin-bottom: 10px; 
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  
+  .section-title {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .about-text, .content-text, .terms-section p {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .about-banner-img, .content-image img, .vision-section .content-image img, .healthy-section img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .journey-section .row, 
+  .vision-section .row, 
+  .healthy-section .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content-text, .healthy-section .content-text {
+    padding: 0;
+  }
+
+  .terms-section button {
+    width: 100%;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Adjusting the layout for smaller screens */
+
+  .about-us, .our-journey, .our-vision, .healthy-recipe {
+      padding: 20px; /* Reduce padding for better fit */
+      font-size: 14px; /* Smaller font for better readability */
+  }
+
+  /* Adjust heading styles */
+  .about-us h2, .our-journey h2, .our-vision h2, .healthy-recipe h2 {
+      font-size: 18px; /* Adjust heading font size */
+      text-align: center; /* Center align for a compact look */
+  }
+
+  /* Make images responsive */
+  .about-us img, .our-journey img, .our-vision img, .healthy-recipe img {
+      width: 100%; /* Full width for images */
+      height: auto; /* Keep aspect ratio */
+      margin: 0 auto; /* Center images */
+  }
+
+  .about-us p, .our-journey p, .our-vision p, .healthy-recipe p {
+    font-size: 14px; /* Smaller font size for readability */
+    line-height: 1.6; /* Slightly increase line height for spacing */
+    text-align: justify; /* Justify text for a clean look */
+    padding: 0 5px; /* Reduce side padding */
+    margin: 10px 0; /* Reduce margins for spacing */
+}
+
+/* Additional styles for improved spacing */
+.about-us p:first-of-type, 
+.our-journey p:first-of-type, 
+.our-vision p:first-of-type, 
+.healthy-recipe p:first-of-type {
+    margin-top: 0; /* Remove top margin for the first paragraph */
+}
+
+/* Center text if needed */
+.about-us p, .our-journey p, .our-vision p, .healthy-recipe p {
+    text-align: center; /* Center-align text for narrow screens */
+}
+
+  /* Adjust section layout */
+  .section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  /* Reduce button sizes */
+  .section button {
+      font-size: 14px;
+      padding: 8px 12px;
+  }
+}

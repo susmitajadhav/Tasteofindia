@@ -1,0 +1,168 @@
+/* Container for the recipe grid */
+.recipe-page-container {
+  width: 100%;
+  padding: 0 10px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.recipe-page-title {
+  text-align: center;
+  font-size: 2.5em;
+  margin: 20px 0;
+  color: #086850;
+  font-weight: bold;
+}
+
+/* Grid layout */
+.recipe-page-grid {
+  display: grid;
+  gap: 20px;
+}
+
+/* Recipe card styles */
+.recipe-card {
+  position: relative;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image */
+.recipe-image {
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Recipe name */
+.recipe-name {
+  font-size: 1.2em;
+  color: #333;
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* Wishlist button */
+.wishlist-button1 {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 36px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.wishlist-button1 .fa-heart {
+  color: white;
+}
+
+.wishlist-button1 .fa-heart.red {
+  color: red;
+}
+
+/* View Recipe button */
+.cara-view-recipe-button {
+  background-color: #8013da;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1em;
+  display: inline-block;
+  margin: 10px auto;
+  width: fit-content;
+  text-decoration: none;
+}
+
+.cara-view-recipe-button:hover {
+  background-color: #2980b9;
+}
+
+/* No recipes message */
+.no-recipes-message {
+  text-align: center;
+  font-size: 1.2em;
+  color: #555;
+}
+
+/* Loading */
+.loading {
+  text-align: center;
+  font-size: 1.5em;
+  color: #999;
+}
+
+/* Error message */
+.error-message {
+  color: red;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+
+/* For screens 1440px and above (4 cards per row) */
+@media (min-width: 1440px) {
+  .recipe-page-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+}
+
+/* For screens between 1024px and 1439px (3 cards per row) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .recipe-page-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+  }
+}
+
+/* For screens between 768px and 1023px (2 cards per row) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .recipe-page-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .recipe-name {
+    font-size: 1.1em;
+  }
+}
+
+/* For screens below 768px (1 card per row) */
+@media (max-width: 767px) {
+  .recipe-page-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .recipe-name {
+    font-size: 1em;
+  }
+
+  .cara-view-recipe-button {
+    font-size: 0.9em;
+  }
+
+  .wishlist-button1 {
+    font-size: 30px;
+  }
+}

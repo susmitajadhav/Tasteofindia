@@ -1,0 +1,211 @@
+/* Container and Background */
+/* Adjust container padding for a consistent margin on all sides */
+.login-signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('./public/images/login/loginbg1.webp') no-repeat center center fixed;
+  background-size: cover;
+  padding: 20px; /* Add padding for space around the container */
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+/* Form Wrapper Styling */
+.form-wrapper {
+  background-color: rgba(255, 255, 255, 0.9); /* Transparent White */
+  padding: 40px; /* Adjust for equal spacing on all sides */
+  margin: 0 15px; /* Add margin to prevent touching screen edges on small devices */
+  border-radius: 16px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Softer shadow */
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+
+textarea {
+  width: 80vw; /* Sets width relative to viewport width */
+  height: 20vh; /* Sets height relative to viewport height */
+  max-width: 600px; /* Maximum width for larger screens */
+  padding: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none; /* Disable resizing to maintain uniform area */
+  margin: 0 auto; /* Center alignment */
+  display: block;
+}
+/* Form Heading */
+h2 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Input Fields */
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 25px; /* Rounded */
+  font-size: 16px;
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1); /* Inner shadow */
+  margin-bottom: 15px;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #ff6f61; /* Soft red color on focus */
+}
+
+/* Buttons */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 25px;
+  background-image: linear-gradient(to right, #ff9966, #ff5e62); /* Vibrant gradient */
+  color: white;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Soft button shadow */
+  font-family: 'Poppins', sans-serif;
+}
+
+.submit-btn:hover {
+  background-image: linear-gradient(to right, #ff5e62, #ff9966); /* Invert gradient on hover */
+}
+
+/* Social Buttons */
+.social-btn {
+  background-color: #4285F4; /* Example for Google button */
+  padding: 10px;
+  border-radius: 25px;
+  width: 100%;
+  color: white;
+  margin-top: 10px;
+  font-size: 16px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-btn:hover {
+  background-color: #357ae8;
+}
+
+/* Toggle Text */
+.toggle-text {
+  font-size: 14px;
+  color: #555;
+  margin-top: 20px;
+}
+
+.toggle-link {
+  color: #ff6f61;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+/* Error and Success Messages */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.success-message {
+  color: green;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1440px) {
+  .form-wrapper {
+    max-width: 400px;
+    padding: 35px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  .submit-btn {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .form-wrapper {
+    max-width: 360px;
+    padding: 30px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  .form-group input {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-signup-container {
+    padding: 15px;
+  }
+  .form-wrapper {
+    max-width: 320px;
+    padding: 25px;
+  }
+  h2 {
+    font-size: 26px;
+  }
+  .form-group input {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .submit-btn {
+    font-size: 15px;
+    padding: 10px;
+  }
+  textarea {
+    width: 95%; /* Slightly adjust width */
+    margin: 0 auto; /* Center alignment */
+    padding: 10px;
+}
+}
+
+@media (max-width: 480px) {
+  .login-signup-container {
+    padding: 10px;
+  }
+  .form-wrapper {
+    max-width: 280px;
+    padding: 20px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  .form-group input {
+    font-size: 14px;
+    padding: 8px;
+  }
+  .submit-btn {
+    font-size: 14px;
+    padding: 8px;
+  }
+  .toggle-text {
+    font-size: 12px;
+  }
+  textarea {
+    width: 90%; /* Adjust width for better alignment */
+    margin: 0 auto; /* Center alignment */
+    padding: 8px;
+}
+}

@@ -1,0 +1,46 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+  --card-padding: 16px;
+  --text-color: #333;
+  --font-family: 'Poppins', sans-serif;
+}
+
+.tipsSection {
+  padding: 20px;
+  background-color: #f8f9fa;
+  font-family: var(--font-family);
+}
+
+.tipsGrid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.tipCard {
+  border-radius: 12px;
+  padding: var(--card-padding);
+  color: var(--text-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.tipImage {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.tipTitle {
+  margin: 10px 0;
+  font-size: 1.2em;
+  font-weight: 600;
+  justify-content: center!important;
+}
+
+.tipText {
+  font-size: 0.95em;
+}

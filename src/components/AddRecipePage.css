@@ -1,0 +1,228 @@
+/* AddRecipePage.css */
+
+/* Main container styling */
+.add-recipe-page {
+    font-family: 'Poppins', sans-serif;
+    background: url('https://files.oaiusercontent.com/file-nWyvNBnuTDj6Fo8UG238dU5x?se=2024-11-13T07%3A06%3A26Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D97153e02-886c-4988-a471-2d6c9a064606.webp&sig=lMP3%2Botn6%2BpeO4s8AGyreCqdQU9ZBfyHGPcyk1u%2BOaU%3D') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+
+/* Form container styling */
+/* Form container styling */
+.add-recipe-container {
+    width: 100%;
+    max-width: 500px; /* Default max width for mobile devices */
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    animation: fadeIn 0.5s;
+}
+
+/* Form header */
+.form-header {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-header:hover {
+    color: #ff5722; /* Change to a warm color on hover */
+}
+
+.form-group {
+    margin-bottom: 25px; /* More spacing between fields */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600; /* Bold labels */
+    color: #444; /* Slightly lighter than the header */
+}
+
+/* Form fields styling */
+/* Form fields styling */
+.form-control {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-control:focus {
+    border-color: #ff5722; /* Border color on focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 87, 34, 0.5); /* Shadow on focus */
+}
+
+/* Submit button styling */
+
+.submit-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #4cae4c;
+}
+
+
+.submit-button:active {
+    transform: translateY(0); /* Reset lift on click */
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Starting opacity */
+        transform: translateY(10px); /* Slight upward movement */
+    }
+    to {
+        opacity: 1; /* Final opacity */
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design */
+/* Responsive design */
+@media (max-width: 600px) {
+    .add-recipe-container {
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    .form-header {
+        font-size: 24px;
+    }
+
+    .form-control {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .submit-button {
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .add-recipe-container {
+        padding: 10px;
+    }
+
+    .form-header {
+        font-size: 20px;
+    }
+
+    .form-control {
+        font-size: 13px;
+    }
+
+    .submit-button {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+/* Responsive Design */
+@media (max-width: 900px) {
+    .add-recipe-container {
+        padding: 30px; /* Adjust padding for medium screens */
+    }
+
+    .form-header {
+        font-size: 32px; /* Adjust header size */
+    }
+
+    .form-group {
+        margin-bottom: 20px; /* Adjust spacing between form groups */
+    }
+
+    .form-control {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .submit-button {
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .add-recipe-container {
+        padding: 10px;
+    }
+
+    .form-header {
+        font-size: 20px;
+    }
+
+    .form-control {
+        font-size: 13px;
+    }
+
+    .form-group {
+        margin-bottom: 15px; /* Smaller spacing */
+    }
+
+    .submit-button {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .add-recipe-container {
+        padding: 15px; /* Minimal padding for very small screens */
+    }
+
+    .form-header {
+        font-size: 24px; /* Even smaller font for header */
+    }
+
+    .form-control {
+        font-size: 13px; /* Smaller font for inputs */
+    }
+
+    .submit-button {
+        padding: 10px; /* Further adjust button padding */
+        font-size: 13px; /* Smaller font size for buttons */
+    }
+
+    .popup {
+        padding: 15px; /* Adjust padding for popup */
+    }
+}

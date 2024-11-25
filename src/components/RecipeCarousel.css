@@ -1,0 +1,63 @@
+.carousel-container {
+  max-width: 100%;
+  padding: 1rem 2rem;
+  margin: 40px auto;
+  position: relative; /* Added for positioning */
+}
+
+/* Adjusting the image container for better visuals */
+.image-container {
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+/* Image styling with hover effect */
+.circle-image {
+  width: 180px !important;
+  height: 180px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+  border: 3px solid rgba(255, 255, 255, 0.5) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+
+.image-title {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Hover effects for scaling */
+.image-container:hover .circle-image {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Customizing Swiper arrows */
+.swiper-button-next, .swiper-button-prev {
+  color: #580b6b; /* Customize your arrow color */
+}
+
+/* Adding transition effects */
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  transform: scale(1.2); /* Slightly increase size on hover */
+}
+
+
+
+/* Responsive styles for the images */
+@media (max-width: 768px) {
+  .circle-image {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .circle-image {
+    width: 120px;
+    height: 120px;
+  }
+}

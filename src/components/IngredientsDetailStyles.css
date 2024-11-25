@@ -1,0 +1,162 @@
+/* Main container */
+.ingredient-detail-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Title */
+.ingredient-title {
+  text-align: center;
+  font-size: 2.5em;
+  color: #2c3e50;
+  margin-bottom: 40px;
+}
+
+/* Recipe list container */
+.ingredient-recipe-list {
+  display: grid;
+  gap: 20px;
+}
+
+/* Recipe card */
+.ingredient-recipe-card {
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Recipe link */
+.ingredient-recipe-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Recipe image */
+.ingredient-recipe-image {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+/* Recipe name */
+.ingredient-recipe-name {
+  font-size: 1.4em;
+  font-weight: 500;
+  margin: 10px 0;
+  color: #34495e;
+}
+
+/* Hover effect on card */
+.ingredient-recipe-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.ingredient-recipe-card:hover .ingredient-recipe-image {
+  transform: scale(1.05);
+}
+
+/* Wishlist button */
+.wishlist-button {
+  background: transparent;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.wishlist-button .fa-heart {
+  color: white;
+}
+
+.wishlist-button.red .fa-heart {
+  color: red;
+}
+
+/* View Recipe Button */
+.ingredient-view-recipe-button {
+  display: inline-block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: #f51810;
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.ingredient-view-recipe-button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+/* Loading and error states */
+.loading,
+.error-message,
+.no-recipes-message {
+  text-align: center;
+  font-size: 1.5em;
+  color: #999;
+  padding: 20px;
+}
+
+/* Responsive styling for different breakpoints */
+@media (max-width: 1440px) {
+  .ingredient-recipe-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .ingredient-title {
+    font-size: 2.2em;
+  }
+  .ingredient-recipe-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .ingredient-title {
+    font-size: 2em;
+  }
+  .ingredient-recipe-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ingredient-recipe-name {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .ingredient-title {
+    font-size: 1.8em;
+  }
+  .ingredient-recipe-list {
+    grid-template-columns: 1fr;
+  }
+  .ingredient-recipe-name {
+    font-size: 1.2em;
+  }
+  .ingredient-view-recipe-button {
+    padding: 8px 16px;
+  }
+  .wishlist-button {
+    font-size: 1.2em;
+  }
+}

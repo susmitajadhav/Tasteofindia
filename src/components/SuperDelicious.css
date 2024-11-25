@@ -1,0 +1,150 @@
+/* Super Delicious Section */
+.super-delicious {
+  background-color: #def7c3;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.super-delicious h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+/* Grid for cards */
+.grid-container {
+  display: grid;
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Responsive grid columns */
+@media (min-width: 1440px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr); /* 4 cards for larger screens */
+  }
+}
+
+@media (max-width: 1440px) and (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr); /* 3 cards for 1024px to 1440px */
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr); /* 2 cards for 768px to 1024px */
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards for 768px to 1024px */
+  }
+
+  .card {
+    padding-bottom: 0px; /* Adjust to reduce extra space below the content */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Reduce spacing below the button */
+  .card .recipe-view-button {
+    margin-bottom: 5px; /* Adjust as needed to control space */
+  }
+
+  /* Reduce padding on the card for smaller screens */
+  .card {
+    padding-bottom: 0px; /* Adjust to reduce extra space below the content */
+    height:fit-content;
+  }
+
+  /* Adjust title or other elements as needed */
+  .card .title {
+    margin-bottom: 5px; /* Adjust space below title */
+  }
+}
+
+
+/* Individual card styling */
+.card {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Recipe View button styling */
+.card .recipe-view-button {
+  display: inline-block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: #076330;
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card .recipe-view-button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+/* Wishlist icon styling */
+.super-delicious .wishlist-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.super-delicious .wishlist-icon.active {
+  color: red;
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+/* Image styling */
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Title styling */
+.card .title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Stars styling */
+.card .stars {
+  display: flex;
+  justify-content: center;
+}
+
+.card .star {
+  color: gold;
+  margin: 0 2px;
+  font-size: 1.5rem;
+}

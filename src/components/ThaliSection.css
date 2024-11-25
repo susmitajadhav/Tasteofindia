@@ -1,0 +1,88 @@
+.thali-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  padding: 30px;
+  background-color: #e2d6e4;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.thali-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.3s ease;
+  padding-bottom: 20px;
+}
+
+.thali-card:hover {
+  transform: scale(1.05);
+}
+
+/* Image takes up 60% of the card height */
+.thali-image {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: center;
+ 
+}
+
+.thali-title {
+  font-size: 1.4em;
+  color: #333;
+  font-weight: bold;
+}
+
+.thali-slogan {
+  font-size: 1em;
+  margin-bottom: 10px;
+  color: #555;
+  
+}
+
+/* Updated button styling */
+.thali-btn {
+  padding: 12px 20px;
+  font-size: 1.1em;
+  color: #fff;
+  background-color: #870aa7;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 15px; /* This ensures some spacing above the button */
+  align-self: center; /* Centers the button */
+  width: fit-content;
+}
+
+.thali-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  .thali-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* .thali-card {
+    
+  } */
+}
