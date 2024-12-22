@@ -1,4 +1,12 @@
-/* Container and Heading */
+/* General Styles */
+body, html {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
 .thali-recipes-container {
     width: 100%;
     padding: 20px;
@@ -31,6 +39,11 @@
     flex-direction: column;
     justify-content: space-between;
     height: 400px;
+}
+
+.thali-recipe-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
 }
 
 /* Image */
@@ -92,12 +105,6 @@
     color: red;
 }
 
-/* Hover Effects */
-.thali-recipe-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
-}
-
 /* Loading Spinner */
 .loading-spinner {
     border: 4px solid #f3f3f3;
@@ -119,26 +126,83 @@
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .thali-recipes-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 
+/* For devices 1024px and below */
+@media (max-width: 1024px) {
+    .thali-recipes-grid {
+        grid-template-columns: repeat(3, 1fr);
+        margin-right: 40px;
+        margin-left: 0;
+    }
     .thali-recipe-card {
         height: 350px;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .thali-recipes-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr); 
     }
 
     .thali-recipe-card {
-        height: auto;
+        height: auto; 
+        display: flex;
+        flex-direction: column; 
+        justify-content: space-between; 
     }
 
+    .thali-recipe-details {
+        margin-top: auto; 
+    }
+
+    .thali-view-recipe-button {
+        display: block; 
+        margin: 0 auto; 
+        width: fit-content; 
+    }
+}
+
+@media (max-width: 1024px) {
+    .thali-recipes-grid {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+
+    .thali-recipe-card {
+        height: auto; 
+        display: flex;
+        flex-direction: column; 
+        justify-content: space-between; 
+    }
+
+    .thali-recipe-details {
+        margin-top: auto; 
+    }
+
+    .thali-view-recipe-button {
+        display: block; 
+        margin: 0 auto; 
+        width: fit-content; 
+    }
+}
+@media (max-width: 480px) {
+   .thali-recipes-heading {
+        text-align: center; 
+        margin: 0 auto;
+        display: block; 
+    }
+    .thali-recipes-grid {
+        grid-template-columns: 1fr;
+        margin-right: 80px;
+    }
+    .thali-recipe-card {
+        height: auto;
+        margin-bottom: 20px;
+     }
     .thali-recipe-image {
         height: 200px;
+    }
+    .thali-recipes-container {
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }

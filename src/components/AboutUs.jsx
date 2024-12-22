@@ -9,9 +9,12 @@ const AboutUs = () => {
   <div className="container">
     <h2 className="section-title">About Us</h2>
     
-    
     <div className="about-banner">
-      <img src="https://img.freepik.com/premium-photo/table-with-many-plates-food-including-food-plate-food_1316278-9481.jpg" alt="About Us Banner" className="about-banner-img" />
+      <img 
+        src="https://img.freepik.com/premium-photo/table-with-many-plates-food-including-food-plate-food_1316278-9481.jpg" 
+        alt="About Us Banner" 
+        className="about-banner-img img-fluid" 
+      />
     </div>
     
     <p className="about-text">
@@ -29,14 +32,18 @@ const AboutUs = () => {
 
 <section className="journey-section">
   <div className="container">
-    <div className="row">
-       {/* Left Column for Image  */}
-      <div className="col-md-6 content-image">
-        <img src="https://img.freepik.com/premium-photo/table-food-with-view-beach-ocean_954226-75674.jpg" alt="Our Journey" className="img-fluid" />
+    <div className="row d-flex align-items-center">
+      {/* Left Column for Image */}
+      <div className="col-12 col-md-6 content-image">
+        <img 
+          src="https://img.freepik.com/premium-photo/table-food-with-view-beach-ocean_954226-75674.jpg" 
+          alt="Our Journey" 
+          className="img-fluid journey-image" 
+        />
       </div>
-      
-      {/* <!-- Right Column for Text --> */}
-      <div className="col-md-6 content-text">
+
+      {/* Right Column for Text */}
+      <div className="col-12 col-md-6 content-text">
         <h2 className="section-title">Our Journey</h2>
         <p>
           Our culinary adventure began with a shared passion for food. What started as a small kitchen experiment has grown into a platform for food lovers across the globe. From our humble beginnings to becoming a vibrant community, our journey has been fueled by creativity and the joy of bringing people together through the art of cooking.
@@ -49,36 +56,38 @@ const AboutUs = () => {
   </div>
 </section>
 
-
 <section className="vision-section">
   <div className="container">
-    <div className="row">
-      {/* Left Column for Text  */}
-      <div className="col-md-6 content-text">
+    <div className="row d-flex align-items-center">
+      {/* Left Column for Text */}
+      <div className="col-12 col-md-6 content-text">
         <h2 className="section-title">Our Vision</h2>
         <p>
-          At the heart of our vision is a belief that food is more than sustenance.it is a means of connection and expression. We aim to empower every home cook to create dishes that not only nourish the body but also feed the soul. By providing access to a diverse array of recipes, we aspire to make cooking an exciting, inclusive experience for all.
-        </p>a
+          At the heart of our vision is a belief that food is more than sustenance. It is a means of connection and expression. We aim to empower every home cook to create dishes that not only nourish the body but also feed the soul. By providing access to a diverse array of recipes, we aspire to make cooking an exciting, inclusive experience for all.
+        </p>
         <p>
           We dream of a world where cooking is an enjoyable journey for everyone, where kitchens become spaces of joy, creativity, and community.
         </p>
       </div>
-      
-       {/* Right Column for Image  */}
-      <div className="col-md-6 ">
-        <img src="https://images7.alphacoders.com/132/thumb-1920-1324469.png" alt="Our Vision" className="img1" />
+
+      {/* Right Column for Image */}
+      <div className="col-12 col-md-6 content-image">
+        <img 
+          src="https://images7.alphacoders.com/132/thumb-1920-1324469.png" 
+          alt="Our Vision" 
+          className="img-fluid vision-image" 
+        />
       </div>
     </div>
   </div>
 </section>
 
-
-        <section className="healthy-section">
-          <div className="container">
-          <div className="row">
-             {/* Left side - Image */}
-               <div className="col-md-6">
-           <img 
+<section className="healthy-section">
+  <div className="container">
+    <div className="row">
+      {/* Left side - Image */}
+      <div className="col-12 col-md-6">
+        <img 
           src="https://img.freepik.com/premium-photo/greek-yogurt-bowl-with-fresh-berries-almond-white-wooden-background-top-view_1162225-35283.jpg?semt=ais_hybrid" 
           alt="healthy content"
           className="img-fluid"
@@ -86,7 +95,7 @@ const AboutUs = () => {
       </div>
 
       {/* Right side - Heading */}
-      <div className="col-md-6 d-flex align-items-center justify-content-center">
+      <div className="col-12 col-md-6 d-flex align-items-center justify-content-center">
         <h2 className="section-title">Healthy Recipes</h2>
       </div>
     </div>
@@ -108,9 +117,7 @@ const AboutUs = () => {
   </div>
 </section>
 
-
-      
-      </main>
+</main>
     </div>
   );
 };

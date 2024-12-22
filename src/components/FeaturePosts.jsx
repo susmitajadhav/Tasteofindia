@@ -12,7 +12,7 @@ const FeaturePosts = () => {
 
   useEffect(() => {
     // Fetch recipes from the backend (replace with your actual endpoint)
-    axios.get('http://localhost:5000/api/recipe?category=Feature')
+    axios.get('https://backend-testofindia.onrender.com/api/recipe?category=Feature')
       .then(response => {
         setPosts(response.data.data); // Assuming the response has a 'data' field with recipe data
       })

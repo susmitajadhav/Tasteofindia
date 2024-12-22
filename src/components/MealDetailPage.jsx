@@ -17,7 +17,7 @@ const MealDetailPage = () => {
                 const courseName = mealType.toLowerCase(); // Convert mealType to lowercase for API compatibility
 
                 // Fetch data based on the course name
-                const response = await fetch(`http://localhost:5000/api/recipe?course=${courseName}`);
+                const response = await fetch(`https://backend-testofindia.onrender.com/api/recipe?course=${courseName}`);
 
                 if (!response.ok) {
                     const errorMessage = await response.text(); // Get error message as text

@@ -14,7 +14,7 @@ const Cake = () => {
     const fetchRecipes = async () => {
       try {
         setLoading(true);
-        const response = await axios.get('http://localhost:5000/api/recipe?category=cake'); // Adjust API endpoint for cake recipes
+        const response = await axios.get('https://backend-testofindia.onrender.com/api/recipe?category=cake'); // Adjust API endpoint for cake recipes
 
         console.log("API Response for Cake Recipes:", response.data);
 

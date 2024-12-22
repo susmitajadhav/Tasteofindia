@@ -11,7 +11,7 @@ const ThaliDetailPage = () => {
 
     // Fetching thali recipes from API
     useEffect(() => {
-        axios.get('http://localhost:5000/api/recipe?category=thali')
+        axios.get('https://backend-testofindia.onrender.com/api/recipe?category=thali')
             .then(response => setRecipes(response.data.data || []))
             .catch(error => console.error('Error fetching thali recipes:', error))
             .finally(() => setLoading(false));

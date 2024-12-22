@@ -43,7 +43,7 @@ const DietDetailPage = () => {
             try {
                 setLoading(true);
                 const queryParam = `meals=${dietMapping[formattedDietaryType]}`;
-                const response = await axios.get(`http://localhost:5000/api/recipe?${queryParam}`);
+                const response = await axios.get(`https://backend-testofindia.onrender.com/api/recipe?${queryParam}`);
 
                 console.log("API Response for Recipes:", response.data);
 

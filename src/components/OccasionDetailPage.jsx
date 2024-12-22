@@ -14,7 +14,7 @@ const OccasionDetailPage = () => {
   // Fetch recipes from the backend based on the occasion
   const fetchRecipes = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/recipe?occasion=${occasionName}`);
+      const response = await fetch(`https://backend-testofindia.onrender.com/api/recipe?occasion=${occasionName}`);
       const data = await response.json();
 
       if (response.ok) {

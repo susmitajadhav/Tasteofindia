@@ -46,7 +46,7 @@ const Footer = () => {
           <h3>Contact Info</h3>
           <ul>
             <li><i className="fas fa-map-marker-alt"></i> Sangli</li>
-            <li><i className="fas fa-phone-alt"></i> +91 12345 67890</li>
+            <li><i className="fas fa-phone-alt"></i> +91 8830458682</li>
             <li><i className="fas fa-envelope"></i> tasteofindia@gmail.com</li>
           </ul>
         </div>

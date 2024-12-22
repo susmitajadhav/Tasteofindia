@@ -36,18 +36,10 @@ const Recipe = () => {
 
     useEffect(() => {
         const fetchRecipe = async () => {
-            try {
-                const response = await fetch(`http://localhost:5000/api/recipe/${id}`);
-                const data = await response.json();
-
-                if (response.ok) {
-                    setRecipe(data.data);
-                }
-            } catch (err) {
-                console.error('An error occurred while fetching recipe details:', err);
-            } finally {
-                setLoading(false);
-            }
+            const response = await fetch(`https://backend-testofindia.onrender.com/api/recipe/${id}`);
+            const data = await response.json();
+            setRecipe(data.data);
+            setLoading(false);
         };
 
         fetchRecipe();
@@ -252,11 +244,11 @@ const Recipe = () => {
                         onChange={(e) => setNewName(e.target.value)}
                     />
                     <textarea
-                        placeholder="Add your review"
+                        placeholder="Your comment"
                         value={newComment}
                         onChange={(e) => setNewComment(e.target.value)}
-                    ></textarea>
-                    <button type="submit">Submit Review</button>
+                    />
+                    <button type="submit">Add Comment</button>
                 </form>
             </div>
         </div>

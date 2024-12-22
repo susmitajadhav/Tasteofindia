@@ -14,7 +14,7 @@ const SearchRecipe = () => {
   useEffect(() => {
     const fetchRecipes = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/recipe/search?query=${query}`);
+        const response = await axios.get(`https://backend-testofindia.onrender.com/api/recipe/search?query=${query}`);
         setResults(response.data.data || []);
       } catch (error) {
         console.error('Error fetching recipes:', error);

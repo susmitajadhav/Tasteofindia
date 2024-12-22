@@ -12,7 +12,7 @@ const AllRecipesPage = () => {
 
   // Fetch recipes from the backend
   useEffect(() => {
-    axios.get('http://localhost:5000/api/recipe')
+    axios.get('https://backend-testofindia.onrender.com/api/recipe')
       .then(response => {
         setRecipes(response.data.data || []);
       })

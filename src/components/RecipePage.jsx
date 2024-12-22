@@ -14,7 +14,7 @@ const RecipePage = () => {
     useEffect(() => {
         const fetchRecipes = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/recipe?category=${category}`);
+                const response = await axios.get(`https://backend-testofindia.onrender.com/api/recipe?category=${category}`);
                 if (response.data && response.data.data) {
                     setRecipes(response.data.data);
                 } else {

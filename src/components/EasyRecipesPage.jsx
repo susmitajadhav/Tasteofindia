@@ -11,7 +11,7 @@ const EasyRecipesPage = () => {
 
   useEffect(() => {
     // Fetch only 'easy' recipes from the backend
-    axios.get('http://localhost:5000/api/recipe?category=easy') // Adjust API endpoint to filter by 'easy' category
+    axios.get('https://backend-testofindia.onrender.com/api/recipe?category=easy') // Adjust API endpoint to filter by 'easy' category
       .then(response => {
         setRecipes(response.data.data); // Assuming the response has a 'data' field with recipe data
       })

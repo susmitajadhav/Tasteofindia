@@ -27,7 +27,7 @@ const IngredientsDetailPage = () => {
             const encodedIngredient = encodeURIComponent(normalizedIngredient);  // Encode the ingredient name
             console.log(`Fetching recipes for: ${encodedIngredient}`);  // Debug log
 
-            const response = await axios.get(`http://localhost:5000/api/recipe?category=${encodedIngredient}`);
+            const response = await axios.get(`https://backend-testofindia.onrender.com/api/recipe?category=${encodedIngredient}`);
             console.log(response.data);  // Debug log to see the response data
 
             if (response.data && response.data.data) {

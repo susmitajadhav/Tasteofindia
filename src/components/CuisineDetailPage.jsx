@@ -20,7 +20,7 @@ const CuisineDetailPage = () => {
   const fetchCuisineRecipes = async () => {
     try {
       const cleanedCuisine = cleanCuisineParam(cuisine); // Clean cuisine parameter
-      const response = await axios.get(`http://localhost:5000/api/recipe?cuisine=${cleanedCuisine}`);
+      const response = await axios.get(`https://backend-testofindia.onrender.com/api/recipe?cuisine=${cleanedCuisine}`);
       
       // Check if there are any recipes, set the state accordingly
       if (response.data && response.data.data) {

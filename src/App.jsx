@@ -1,53 +1,53 @@
 import React, { Suspense, lazy } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import Header from './components/Header';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import ScrollToTop from './components/ScrollToTop';
-import PublicRoute from './components/PublicRoute';
-import ProtectedRoute from './components/ProtectedRoute';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import Header from './Components/Header';
+import Navbar from './Components/Navbar';
+import Footer from './Components/Footer';
+import ScrollToTop from './Components/ScrollToTop';
+import PublicRoute from './Components/PublicRoute';
+import ProtectedRoute from './Components/ProtectedRoute';
 import { WishlistProvider } from './context/WishlistContext';
 import { AuthProvider } from './context/AuthContext';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-const CuisineDetailPage = lazy(() => import('./components/CuisineDetailPage'));
+const CuisineDetailPage = lazy(() => import('./Components/CuisineDetailPage'));
 
-// Lazy-loaded components for better performance
-const Banner = lazy(() => import('./components/Banner'));
-const AboutUs = lazy(() => import('./components/AboutUs'));
-const KitchenTips = lazy(() => import('./components/KitchenTips'));
-const RecipePage = lazy(() => import('./components/RecipePage'));
-const AllRecipesPage = lazy(() => import('./components/AllRecipesPage'));
-const ThelaMenu = lazy(() => import('./components/ThelaMenu'));
-const OccasionDetailPage = lazy(() => import('./components/OccasionDetailPage'));
-const TasteDetailPage = lazy(() => import('./components/TasteDetailPage'));
-const MealDetailPage = lazy(() => import('./components/MealDetailPage'));
-const DietDetailPage = lazy(() => import('./components/DietDetailPage'));
-const ThaliSection = lazy(() => import('./components/ThaliSection'));
-const ThaliDetailPage = lazy(() => import('./components/ThaliDetailPage'));
-const LatestRecipes = lazy(() => import('./components/LatestRecipes'));
-const RecipeCarousel = lazy(() => import('./components/RecipeCarousel'));
-const TodayMenu = lazy(() => import('./components/TodayMenu'));
-const SuperDelicious = lazy(() => import('./components/SuperDelicious'));
-const FeaturePosts = lazy(() => import('./components/FeaturePosts'));
-const UniqueFood = lazy(() => import('./components/UniqueFood'));
-const AddRecipePage = lazy(() => import('./components/AddRecipePage'));
-const IngredientsDetailPage = lazy(() => import('./components/IngredientsDetailPage'));
-//const AllIngredientsPage = lazy(() => import('./components/AllIngredientsPage'));
-const Recipe = lazy(() => import('./components/Recipe'));
-const Recipe1 = lazy(() => import('./components/Recipe1'));
-const WishlistPage = lazy(() => import('./components/WishlistPage'));
-const LoginSignup = lazy(() => import('./components/LoginSignup'));
-const Cake = lazy(() => import('./components/Cake'));
-const Icecream = lazy(() => import('./components/Icecream'));
-const EasyRecipesPage = lazy(() => import('./components/EasyRecipesPage'));
-const SearchRecipe = lazy(() => import('./components/SearchRecipe'));
-const Privacy = lazy(() => import('./components/Privacy'));
-const Faq = lazy(() => import('./components/Faq'));
-const Contact = lazy(() => import('./components/Contact'));
-const Blog = lazy(() => import('./components/Blog'));
-const Terms = lazy(() => import('./components/Terms'));
+// Lazy-loaded Components for better performance
+const Banner = lazy(() => import('./Components/Banner'));
+const AboutUs = lazy(() => import('./Components/AboutUs'));
+const KitchenTips = lazy(() => import('./Components/KitchenTips'));
+const RecipePage = lazy(() => import('./Components/RecipePage'));
+const AllRecipesPage = lazy(() => import('./Components/AllRecipesPage'));
+const ThelaMenu = lazy(() => import('./Components/ThelaMenu'));
+const OccasionDetailPage = lazy(() => import('./Components/OccasionDetailPage'));
+const TasteDetailPage = lazy(() => import('./Components/TasteDetailPage'));
+const MealDetailPage = lazy(() => import('./Components/MealDetailPage'));
+const DietDetailPage = lazy(() => import('./Components/DietDetailPage'));
+const ThaliSection = lazy(() => import('./Components/ThaliSection'));
+const ThaliDetailPage = lazy(() => import('./Components/ThaliDetailPage'));
+const LatestRecipes = lazy(() => import('./Components/LatestRecipes'));
+const RecipeCarousel = lazy(() => import('./Components/RecipeCarousel'));
+const TodayMenu = lazy(() => import('./Components/TodayMenu'));
+const SuperDelicious = lazy(() => import('./Components/SuperDelicious'));
+const FeaturePosts = lazy(() => import('./Components/FeaturePosts'));
+const UniqueFood = lazy(() => import('./Components/UniqueFood'));
+const AddRecipePage = lazy(() => import('./Components/AddRecipePage'));
+const IngredientsDetailPage = lazy(() => import('./Components/IngredientsDetailPage'));
+//const AllIngredientsPage = lazy(() => import('./Components/AllIngredientsPage'));
+const Recipe = lazy(() => import('./Components/Recipe'));
+const Recipe1 = lazy(() => import('./Components/Recipe1'));
+const WishlistPage = lazy(() => import('./Components/WishlistPage'));
+const LoginSignup = lazy(() => import('./Components/LoginSignup'));
+const Cake = lazy(() => import('./Components/Cake'));
+const Icecream = lazy(() => import('./Components/Icecream'));
+const EasyRecipesPage = lazy(() => import('./Components/EasyRecipesPage'));
+const SearchRecipe = lazy(() => import('./Components/SearchRecipe'));
+const Privacy = lazy(() => import('./Components/Privacy'));
+const Faq = lazy(() => import('./Components/Faq'));
+const Contact = lazy(() => import('./Components/Contact'));
+const Blog = lazy(() => import('./Components/Blog'));
+const Terms = lazy(() => import('./Components/Terms'));
 
 // Layout component for shared header, navbar, and footer
 function Layout({ children }) {
@@ -81,7 +81,7 @@ const App = () => {
     return (
         <AuthProvider>
             <WishlistProvider>
-            <Router basename="/TasteOfIndia">
+            <Router>
 
                     <ScrollToTop />
                     <div className="App">

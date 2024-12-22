@@ -366,33 +366,45 @@
     }
 }
 
-/* Recipe link button styling */
 .recipe-link-button {
-    background-color: #ffabc7; /* Pink background */
-    color: #fff; /* White text */
-    border: none; /* Remove border */
+    background-color: #fff; /* White inner space */
+    display: flex; /* Enable flexbox */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    color: #000; /* Black text */
+    border: 2px solid #21bd96; /* Green border */
     padding: 10px 20px; /* Padding inside the button */
     border-radius: 5px; /* Rounded corners */
-    font-size: 14px; /* Font size */
-    font-family: 'Poppins', sans-serif; /* Font family */
-    cursor: pointer; /* Pointer cursor on hover */
-    text-align: center; /* Center text alignment */
-    min-width: 120px; /* Consistent width */
-    display: inline-block; /* Align buttons inline */
-    margin-right: 10px; /* Spacing between buttons */
-    margin-bottom: 10px; /* Spacing for stacked buttons */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for hover */
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    min-width: 120px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
 }
 
-/* Hover and active effects for recipe link buttons */
 .recipe-link-button:hover {
-    background-color: #e08cab; /* Darker pink on hover */
-    transform: scale(1.05); /* Slight zoom effect on hover */
+    background-color: #21bd96;  
+    color: #fff; 
+    transform: scale(1.05); 
 }
 
 .recipe-link-button:active {
-    background-color: #c07596; /* Even darker pink on active */
-    transform: scale(0.95); /* Slight shrink effect on click */
+    transform: scale(0.98); 
+}
+
+.recipe-links-section ul {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+}
+
+.recipe-links-section li {
+    display: inline-flex; 
 }
 
 /* Recipe Process Section */
@@ -405,20 +417,83 @@
 
 /* Ingredients Section (Left) */
 .recipe-ingredients {
-    flex: 0 0 40%; /* Take 40% of the width */
+    flex: 0 0 40%; 
     max-width: 40%;
 }
 
 /* Process Section (Right) */
 .recipe-process {
-    flex: 0 0 60%; /* Take 60% of the width */
+    flex: 0 0 60%; 
     max-width: 60%;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1440px) {
+    .recipe-ingredients, .recipe-process {
+        max-width: 45%; 
+    }
+}
+
+@media (max-width: 1024px) {
+    .recipe-ingredients, .recipe-process {
+        max-width: 48%; /* Equal space on smaller laptops */
+    }
+}
+
+@media (max-width: 768px) {
+    .recipe-process-section {
+        flex-direction: column; /* Stack vertically */
+    }
+
+    .recipe-ingredients, 
+    .recipe-process {
+        max-width: 100%; /* Full width */
+        flex: 0 0 100%;
+    }
+
+    .add-comment-form {
+        flex-direction: column; /* Stack elements vertically */
+        gap: 10px; /* Reduce the gap for better spacing */
+        max-width: 70%; /* Decrease the width of the form */
+        
+    }
+
+    .add-comment-form button {
+        width: 100%; /* Make button full width */
+        align-self: stretch; /* Center the button horizontally */
+    }
+    .add-comment-form input,
+.add-comment-form textarea {
+    width: 95%!important;
+}
+}
+
+@media (max-width: 480px) {
+    .recipe-process-section {
+        display: flex;
+        flex-direction: column; /* Ensure proper stacking */
+        gap: 10px; /* Smaller gap for mobile */
+    }
+
+    .recipe-ingredients, 
+    .recipe-process {
+        padding: 10px; /* Optional: Add padding for smaller screens */
+    }
+
+    .add-comment-form {
+        flex-direction: column; /* Stack elements vertically */
+        gap: 10px; /* Reduce the gap for better spacing */
+    }
+
+    .add-comment-form button {
+        width: 100%; /* Make button full width */
+        align-self: stretch; /* Center the button horizontally */
+    }
 }
 
 /* Add Comment Form Styling */
 .add-comment-form {
     display: flex;
-    flex-direction: column;
     gap: 15px;
     margin-top: 30px;
     padding: 20px;
@@ -473,37 +548,172 @@
     transform: scale(0.98);
 }
 
-/* Responsive Breakpoints */
+
+/* Base styles (default for larger screens) */
+.recipe-detail-container {
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.recipe-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.recipe-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.recipe-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.recipe-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.recipe-detail-image .image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.essential-details {
+    display: flex;
+    gap: 20px;
+}
+
+.essential-details-column {
+    flex: 1;
+}
+
+.recipe-links-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.recipe-links-section ul li {
+    margin-bottom: 10px;
+}
+
+.recipe-link-button {
+    background-color: #ffabc7;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.recipe-video iframe {
+    border-radius: 10px;
+}
+
+/* Media Queries */
 @media (max-width: 1440px) {
-    .recipe-ingredients, .recipe-process {
-        max-width: 45%; /* Slightly narrower at large screens */
+    .recipe-title {
+        font-size: 1.8rem;
+    }
+    .essential-details {
+        gap: 15px;
     }
 }
 
 @media (max-width: 1024px) {
-    .recipe-ingredients, .recipe-process {
-        max-width: 48%; /* Equal space on smaller laptops */
+    .recipe-header {
+        flex-direction: column;
+    }
+    .recipe-buttons {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .recipe-detail-grid {
+        grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 768px) {
-    .recipe-process-section {
-        flex-direction: column; /* Stack vertically */
+    .recipe-title {
+        font-size: 1.5rem;
     }
-
-    .recipe-ingredients, .recipe-process {
-        max-width: 100%; /* Full width */
-        flex: 0 0 100%;
+    .essential-details {
+        flex-direction: column;
+    }
+    .recipe-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .recipe-detail-image .image-container img {
+        height: auto;
+    }
+    .recipe-video iframe {
+        height: 250px;
     }
 }
 
 @media (max-width: 480px) {
-    .recipe-process-section {
-        flex-direction: column; /* Ensure proper stacking */
-        gap: 10px; /* Smaller gap for mobile */
+    .recipe-title {
+        font-size: 1.2rem;
     }
+    .recipe-header {
+        margin-bottom: 10px;
+    }
+    .recipe-buttons {
+        display:flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .recipe-detail-grid {
+        grid-template-columns: 1fr;
+    }
+    .essential-details {
+        flex-direction: column;
+    }
+    .essential-details-column {
+        margin-bottom: 15px;
+    }
+    .recipe-links-section ul li {
+        margin-bottom: 8px;
+    }
+    .recipe-video iframe {
+        height: 200px;
+    }
+}
 
-    .recipe-ingredients, .recipe-process {
-        padding: 10px; /* Optional: Add padding for smaller screens */
-    }
+.recipe-link-button {
+    background-color: #fff;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: #000; 
+    border: 2px solid #21bd96; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    min-width: 100px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; 
+}
+
+.recipe-link-button:hover {
+    background-color: #21bd96; /* Green background on hover */
+    color: #fff; /* White text on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.recipe-link-button:active {
+    transform: scale(0.98); /* Slightly smaller on click */
 }

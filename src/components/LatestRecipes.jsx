@@ -14,7 +14,7 @@ const LatestRecipes = () => {
     // Fetch latest recipes from the backend by category
     const fetchLatestRecipes = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/recipe', {
+        const response = await axios.get('https://backend-testofindia.onrender.com/api/recipe', {
           params: { category: 'latest' } // Pass category as a query parameter
         });
         setLatestRecipes(response.data.data); // Assuming the response has a 'data' field with recipe data

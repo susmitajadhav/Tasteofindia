@@ -59,7 +59,7 @@ const Navbar = () => {
               <li><Link to="/ingredients/paneer">Paneer</Link></li>
               <li><Link to="/ingredients/vegetables">Vegetables</Link></li>
               <li><Link to="/ingredients/fruits">Fruits</Link></li>
-              <li><Link to="/ingredients/all-ingredient">All Ingredients</Link></li>
+              {/* <li><Link to="/ingredients/all-ingredient">All Ingredients</Link></li> */}
             </ul>
           </li>
 
@@ -79,7 +79,7 @@ const Navbar = () => {
           <li className="nav-item dropdown">
             <Link to="#">Cuisine ▼ </Link>
             <ul className="dropdown-menu">
-              <li><Link to="/cuisine">All Cuisines</Link></li>
+              {/* <li><Link to="/cuisine">All Cuisines</Link></li> */}
               <li><Link to="/cuisine/maharashtrian">Maharashtrian</Link></li>
               <li><Link to="/cuisine/south Indian">South Indian</Link></li>
               <li><Link to="/cuisine/north Indian">North Indian</Link></li>

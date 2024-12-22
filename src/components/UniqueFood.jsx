@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './UniqueFood.css';
 
 const UniqueFood = () => {
@@ -6,13 +7,13 @@ const UniqueFood = () => {
     {
       img: 'https://ichef.bbc.co.uk/ace/standard/1600/food/recipes/rainbow_cake_20402_16x9.jpg.webp',
       title: 'Cake',
-      link: '/cake', // Link to the Cake component
+      link: '/cake',
       recipes: 'View Recipe',
     },
     {
       img: 'https://img.freepik.com/premium-photo/variety-colorful-ice-creams-are-wooden-table_337384-5986.jpg',
       title: 'Ice Cream',
-      link: '/ice-cream', // Link for Icecream component
+      link: '/ice-cream',
       recipes: 'View Recipe',
     },
   ];
@@ -22,7 +23,7 @@ const UniqueFood = () => {
       <h1 className="unique-food-title">Creamy Cravings</h1>
       <div className="unique-food-grid">
         {foods.map((food, index) => (
-          <a key={index} href={food.link} className="unique-food-link">
+          <Link key={index} to={food.link} className="unique-food-link">
             <div className="unique-food-card">
               <img src={food.img} alt={food.title} />
               <div className="info">
@@ -30,7 +31,7 @@ const UniqueFood = () => {
                 <button className="recipe-btn">{food.recipes}</button>
               </div>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
     </div>

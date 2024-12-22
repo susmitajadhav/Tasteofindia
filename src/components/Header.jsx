@@ -32,7 +32,7 @@ const Header = () => {
     const handleSearch = async (e) => {
         if (e.key === 'Enter' || e.type === 'click') {
             try {
-                const response = await axios.get(`http://localhost:5000/api/recipe/search?query=${searchQuery}`);
+                const response = await axios.get(`https://backend-testofindia.onrender.com/api/recipe/search?query=${searchQuery}`);
                 const searchResults = response.data.data;
                 navigate('/search', { state: { results: searchResults, query: searchQuery } });
             } catch (error) {
@@ -47,7 +47,7 @@ const Header = () => {
             <div className="header d-flex justify-content-between align-items-center">
                 <div className="logo">
                     <a href="#">
-                        <img src="../public/images/logo1-removebg-preview.png" alt="Logo" className="logo-img" />
+                        <img src="public/images/logo.jpeg" alt="Logo" className="logo-img" />
                     </a>
                 </div>
 

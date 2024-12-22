@@ -13,8 +13,8 @@ const ThelaMenu = () => {
         const fetchRecipes = async () => {
             try {
                 const [thelaResponse, streetFoodResponse] = await Promise.all([
-                    axios.get('http://localhost:5000/api/recipe', { params: { category: 'Thela' } }),
-                    axios.get('http://localhost:5000/api/recipe', { params: { category: 'Street Food' } }),
+                    axios.get('https://recipe-backend-gx1f.onrender.com/api/recipe', { params: { category: 'Thela' } }),
+                    axios.get('https://recipe-backend-gx1f.onrender.com/api/recipe', { params: { category: 'Street Food' } }),
                 ]);
 
                 const thelaRecipes = thelaResponse.data?.data || [];

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './ThaliSection.css';
 
 const ThaliSection = () => {
@@ -8,7 +9,6 @@ const ThaliSection = () => {
       <div className="thali-card">
         <div className="card-header">
           <h2 className="thali-title">Indian Thali</h2>
-         
         </div>
         <p className="thali-slogan">Experience the flavors of India!</p>
         <img
@@ -16,14 +16,13 @@ const ThaliSection = () => {
           alt="Indian Thali"
           className="thali-image thali-animated"
         />
-        <a href="/thali" className="thali-btn btn-animated">View Thalis</a>
+        <Link to="/thali" className="thali-btn btn-animated">View Thalis</Link>
       </div>
 
       {/* Card for Easy and Quick Recipes */}
       <div className="thali-card">
         <div className="card-header">
-          <h2 className="thali-title"> Quick Recipes</h2>
-        
+          <h2 className="thali-title">Quick Recipes</h2>
         </div>
         <p className="thali-slogan">Delicious meals in no time!</p>
         <img
@@ -31,7 +30,7 @@ const ThaliSection = () => {
           alt="Easy Recipes"
           className="thali-image thali-animated"
         />
-        <a href="/easy-recipes" className="thali-btn btn-animated">View Recipes</a>
+        <Link to="/easy-recipes" className="thali-btn btn-animated">View Recipes</Link>
       </div>
     </section>
   );

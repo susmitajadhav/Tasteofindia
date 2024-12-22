@@ -12,7 +12,7 @@ const TodayMenu = () => {
 
   useEffect(() => {
     // Fetch today's menu recipes from the backend
-    axios.get('http://localhost:5000/api/recipe?category=todays')
+    axios.get('https://backend-testofindia.onrender.com/api/recipe?category=todays')
       .then(response => {
         setMenuItems(response.data.data); // Assuming 'data' field holds recipe data
       })

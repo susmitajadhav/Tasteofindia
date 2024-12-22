@@ -14,7 +14,7 @@ const SuperDelicious = () => {
     // Fetch delicious recipes from the backend
     const fetchDeliciousRecipes = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/recipe', {
+        const response = await axios.get('https://backend-testofindia.onrender.com/api/recipe', {
           params: { category: 'Delicious' } // Pass category as a query parameter
         });
 
