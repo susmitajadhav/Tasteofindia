@@ -20,7 +20,7 @@ const UniqueFood = () => {
 
   return (
     <div className="unique-food-container">
-      <h1 className="unique-food-title">Creamy Cravings</h1>
+      <h1 className="unique-food-title">Creamy Craving</h1>
       <div className="unique-food-grid">
         {foods.map((food, index) => (
           <Link key={index} to={food.link} className="unique-food-link">
