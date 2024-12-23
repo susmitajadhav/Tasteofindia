@@ -110,7 +110,7 @@ const Recipe1 = () => {
                         <FaSave /> Save
                     </button>
                     <button className="btn" onClick={handleShare}>
-                        <FaShareAlt /> Share
+                        <FaShareAlt /> Share1
                     </button>
                 </div>
             </div>
