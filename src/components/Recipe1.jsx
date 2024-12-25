@@ -14,7 +14,7 @@ const Recipe1 = () => {
     useEffect(() => {
         const fetchRecipe = async () => {
             try {
-                const response = await fetch(`https://backend-testofindia.onrender.com/api/recipe/${id}`);
+                const response = await fetch(`http://localhost:5000/api/recipe/${id}`);
                 const data = await response.json();
 
                 if (response.ok) {
@@ -110,7 +110,7 @@ const Recipe1 = () => {
                         <FaSave /> Save
                     </button>
                     <button className="btn" onClick={handleShare}>
-                        <FaShareAlt /> Share1
+                        <FaShareAlt /> Share
                     </button>
                 </div>
             </div>
